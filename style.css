@@ -29,13 +29,13 @@ body {
   margin: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 h1 {
-  padding: 100px 0 50px 0;
   font-size: 3em;
   text-align: center;
-}
-h1:not(:nth-child(1)){
-  border-top: 1px solid black;
 }
 
 .navbar {
@@ -171,6 +171,7 @@ h1:not(:nth-child(1)){
   }
   .burger {
     display: block;
+    cursor: pointer;
   }
   .navbar .burger {
     position: fixed;
@@ -247,6 +248,57 @@ h1:not(:nth-child(1)){
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.main-page {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-page .description {
+}
+
+.main-page h1 {
+  font-size: 72px;
+  text-align: left;
+}
+.main-page .description span {
+  font-size: 36px;
+}
+
+.main-page .images {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.main-page .images .item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-page .images .item {
+  margin: 10px;
+}
+.main-page .images img {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .main-page h1 {
+    font-size: 54px;
+  }
+  .main-page span {
+    font-size: 24px;
+  }
 }
 
 .services {
@@ -409,12 +461,12 @@ h1:not(:nth-child(1)){
 .addres, .tele {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
-@media screen and (max-width: 1000px){
+/* @media screen and (max-width: 1000px){
   .contact-info{
     font-size: 12px;
     width: 300px;
     height: 180px;
-  }
+  } */
   .addres, .tele, .email {
     padding: 10px;
   }
